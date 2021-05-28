@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:storybook_flutter/storybook_flutter.dart';
+import 'typography.dart';
 
 void main() {
   runApp(MyApp());
@@ -82,79 +83,136 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) => Storybook(
         children: [
           Story(
-            name: "Button Default",
-            section: "Button",
-            builder: (_, k) => ElevatedButton(
-              child: k.options(
-                  label: "Icon",
-                  initial: Text(
-                    k.text(label: "Text", initial: "Button"),
-                  ),
-                  options: [
-                    Option(
-                        "No Icon",
-                        Text(
-                          "Button",
-                          style: TextStyle(color: Colors.black),
-                        )),
-                    Option(
-                        "With Prepend",
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Icon(
-                                  Icons.folder_open_outlined,
-                                  color: Colors.black,
-                                )),
-                            Text(
-                              "Button",
-                              style: TextStyle(color: Colors.black),
-                            )
-                          ],
-                        )),
-                    Option(
-                        "With Append",
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              "Button",
-                              style: TextStyle(color: Colors.black),
-                            ),
-                            Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Icon(
-                                  Icons.chevron_right,
-                                  color: Colors.black,
-                                ))
-                          ],
-                        ))
-                  ]),
-              style: k.options(label: "Theme", initial: this.primary, options: [
-                Option("Primary", this.primary),
-                Option("Secondary", this.secondary)
-              ]),
-              onPressed:
-                  k.boolean(label: 'Enabled', initial: true) ? () {} : null,
-            ),
-          ),
+              name: 'Primary Button',
+              section: "Button",
+              builder: (_, k) => ElevatedButton(
+                    child: k.options(
+                        label: "Icon",
+                        initial: Text(
+                          k.text(label: "Text", initial: "Button"),
+                        ),
+                        options: [
+                          Option(
+                              "No Icon",
+                              Text(
+                                "Button",
+                                style: BodyText2Regular,
+                              )),
+                          Option(
+                              "With Prepend",
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Icon(
+                                        Icons.folder_open_outlined,
+                                        color: Colors.black,
+                                      )),
+                                  Text(
+                                    "Button",
+                                    style: BodyText2Regular,
+                                  )
+                                ],
+                              )),
+                          Option(
+                              "With Append",
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    "Button",
+                                    style: BodyText2Regular,
+                                  ),
+                                  Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Icon(
+                                        Icons.chevron_right,
+                                        color: Colors.black,
+                                      ))
+                                ],
+                              ))
+                        ]),
+                    style: this.primary,
+                    onPressed: k.boolean(label: 'Enabled', initial: true)
+                        ? () {}
+                        : null,
+                  )),
           Story(
-            name: "Button Secondary",
+              name: 'Secondary Button',
+              section: "Button",
+              builder: (_, k) => ElevatedButton(
+                    child: k.options(
+                        label: "Icon",
+                        initial: Text(
+                          k.text(label: "Text", initial: "Button"),
+                          style: BodyText2Bold,
+                        ),
+                        options: [
+                          Option(
+                              "No Icon",
+                              Text(
+                                "Button",
+                                style: BodyText2Bold,
+                              )),
+                          Option(
+                              "With Prepend",
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Icon(
+                                        Icons.folder_open_outlined,
+                                        color: Colors.white,
+                                      )),
+                                  Text(
+                                    "Button",
+                                    style: BodyText2Bold,
+                                  )
+                                ],
+                              )),
+                          Option(
+                              "With Append",
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    "Button",
+                                    style: BodyText2Bold,
+                                  ),
+                                  Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Icon(
+                                        Icons.chevron_right,
+                                        color: Colors.white,
+                                      ))
+                                ],
+                              ))
+                        ]),
+                    style: this.secondary,
+                    onPressed: k.boolean(label: 'Enabled', initial: true)
+                        ? () {}
+                        : null,
+                  )),
+          Story(
+            name: "Outlined Button",
             section: "Button",
             builder: (_, k) => OutlinedButton(
               child: k.options(
                   label: "Icon",
                   initial: Text(
                     k.text(label: "Text", initial: "Button"),
+                    style: BodyText2Regular,
                   ),
                   options: [
                     Option(
                         "No Icon",
                         Text(
                           "Button",
-                          style: TextStyle(color: Colors.black),
+                          style: BodyText2Regular,
                         )),
                     Option(
                         "With Prepend",
@@ -169,7 +227,7 @@ class MyApp extends StatelessWidget {
                                 )),
                             Text(
                               "Button",
-                              style: TextStyle(color: Colors.black),
+                              style: BodyText2Regular,
                             )
                           ],
                         )),
@@ -180,7 +238,7 @@ class MyApp extends StatelessWidget {
                           children: [
                             Text(
                               "Button",
-                              style: TextStyle(color: Colors.black),
+                              style: BodyText2Regular,
                             ),
                             Padding(
                                 padding: const EdgeInsets.all(8.0),
@@ -216,39 +274,6 @@ class MyApp extends StatelessWidget {
               ],
             )),
           ),
-          Story.simple(
-              name: "Top Bar",
-              child: Scaffold(
-                appBar: AppBar(
-                  backgroundColor: Colors.white,
-                  title: Text("Title Goes Here"),
-                  elevation: 16,
-                  toolbarHeight: 80.0,
-                  leading: Icon(Icons.arrow_back),
-                  actions: [
-                    IconButton(
-                      icon: Icon(Icons.add_circle_outline),
-                      onPressed: () {},
-                      color: Colors.black,
-                    ),
-                    IconButton(
-                      icon: Icon(Icons.add_circle_outline),
-                      onPressed: () {},
-                      color: Colors.black,
-                    ),
-                    IconButton(
-                      icon: Icon(Icons.add_circle_outline),
-                      onPressed: () {},
-                      color: Colors.black,
-                    ),
-                    IconButton(
-                      icon: Icon(Icons.add_circle_outline),
-                      onPressed: () {},
-                      color: Colors.black,
-                    ),
-                  ],
-                ),
-              ))
         ],
       );
 }
