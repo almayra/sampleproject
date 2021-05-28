@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:storybook_flutter/storybook_flutter.dart';
 import 'typography.dart';
+import 'colors.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,8 +10,8 @@ void main() {
 class MyApp extends StatelessWidget {
   final ButtonStyle primary = ButtonStyle(backgroundColor:
       MaterialStateProperty.resolveWith<Color>((Set<MaterialState> states) {
-    if (states.contains(MaterialState.disabled)) return Colors.yellow.shade50;
-    return Colors.yellow.shade700;
+    if (states.contains(MaterialState.disabled)) return primary50;
+    return primary700;
   }), foregroundColor:
       MaterialStateProperty.resolveWith<Color>((Set<MaterialState> states) {
     if (states.contains(MaterialState.disabled)) return Colors.grey.shade500;
@@ -254,26 +255,109 @@ class MyApp extends StatelessWidget {
                   k.boolean(label: 'Enabled', initial: true) ? () {} : null,
             ),
           ),
-          Story.simple(
-            name: "Navigation Bar",
-            child: Scaffold(
-                bottomNavigationBar: BottomNavigationBar(
-              selectedItemColor: Colors.yellow.shade700,
-              unselectedItemColor: Colors.grey,
-              items: [
-                BottomNavigationBarItem(
-                  icon: Icon(Icons.home_outlined),
-                  label: "Beranda",
-                ),
-                BottomNavigationBarItem(
-                  icon: Icon(Icons.access_time),
-                  label: "Histori",
-                ),
-                BottomNavigationBarItem(
-                    icon: Icon(Icons.credit_card_outlined), label: "Dana KUR")
-              ],
-            )),
-          ),
+          Story(
+              name: "Input Field",
+              builder: (_, k) => Scaffold(
+                    body: Column(
+                      children: [
+                        k.options(
+                            label: "Input Field",
+                            initial: TextField(
+                              decoration: InputDecoration(
+                                  hintText: "Example",
+                                  labelStyle:
+                                      TextStyle(color: Color(0xFF40A9FF)),
+                                  enabledBorder: OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                          color: Colors.grey, width: 1.0)),
+                                  focusedBorder: OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                          color: Color(0xFF40A9FF),
+                                          width: 1.0))),
+                              keyboardType: TextInputType.name,
+                            ),
+                            options: [
+                              Option(
+                                "None",
+                                TextField(
+                                  decoration: InputDecoration(
+                                      hintText: "Example",
+                                      labelStyle:
+                                          TextStyle(color: Color(0xFF40A9FF)),
+                                      enabledBorder: OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                              color: Colors.grey, width: 1.0)),
+                                      focusedBorder: OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                              color: Color(0xFF40A9FF),
+                                              width: 1.0))),
+                                  keyboardType: TextInputType.name,
+                                ),
+                              ),
+                              Option(
+                                "Prefix Icon",
+                                TextField(
+                                  decoration: InputDecoration(
+                                      hintText: "Example",
+                                      labelStyle:
+                                          TextStyle(color: Color(0xFF40A9FF)),
+                                      prefixIcon: Icon(
+                                        Icons.folder_open_outlined,
+                                        color: Colors.grey,
+                                      ),
+                                      enabledBorder: OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                              color: Colors.grey, width: 1.0)),
+                                      focusedBorder: OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                              color: Color(0xFF40A9FF),
+                                              width: 1.0))),
+                                  keyboardType: TextInputType.name,
+                                ),
+                              ),
+                              Option(
+                                "Suffix Icon",
+                                TextField(
+                                  decoration: InputDecoration(
+                                      hintText: "Example",
+                                      labelStyle:
+                                          TextStyle(color: Color(0xFF40A9FF)),
+                                      suffixIcon: Icon(
+                                        Icons.folder_open_outlined,
+                                        color: Colors.grey,
+                                      ),
+                                      enabledBorder: OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                              color: Colors.grey, width: 1.0)),
+                                      focusedBorder: OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                              color: Color(0xFF40A9FF),
+                                              width: 1.0))),
+                                  keyboardType: TextInputType.name,
+                                ),
+                              ),
+                              Option(
+                                "Suffix Text",
+                                TextField(
+                                  decoration: InputDecoration(
+                                      hintText: "Example",
+                                      labelStyle:
+                                          TextStyle(color: Color(0xFF40A9FF)),
+                                      suffixText: "Https://",
+                                      enabledBorder: OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                              color: Colors.grey, width: 1.0)),
+                                      focusedBorder: OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                              color: Color(0xFF40A9FF),
+                                              width: 1.0))),
+                                  keyboardType: TextInputType.name,
+                                ),
+                              )
+                            ])
+                      ],
+                    ),
+                  ))
         ],
       );
 }
