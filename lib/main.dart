@@ -80,6 +80,20 @@ class MyApp extends StatelessWidget {
         return Colors.black;
       }));
 
+  final InputDecoration defaultinput = InputDecoration(
+    hintText: "Example",
+    labelStyle: TextStyle(color: Color(0xFF40A9FF)),
+    enabledBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: Colors.grey, width: 1.0),
+        borderRadius: BorderRadius.circular(8)),
+    focusedBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: Color(0xFF40A9FF), width: 1.0),
+        borderRadius: BorderRadius.circular(8)),
+    disabledBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: Color(0xFFD9D9D9), width: 1.0),
+        borderRadius: BorderRadius.circular(8)),
+  );
+
   @override
   Widget build(BuildContext context) => Storybook(
         children: [
@@ -263,34 +277,18 @@ class MyApp extends StatelessWidget {
                         k.options(
                             label: "Input Field",
                             initial: TextField(
-                              decoration: InputDecoration(
-                                  hintText: "Example",
-                                  labelStyle:
-                                      TextStyle(color: Color(0xFF40A9FF)),
-                                  enabledBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                          color: Colors.grey, width: 1.0)),
-                                  focusedBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                          color: Color(0xFF40A9FF),
-                                          width: 1.0))),
+                              enabled:
+                                  k.boolean(label: "Enabled", initial: true)
+                                      ? true
+                                      : false,
+                              decoration: this.defaultinput,
                               keyboardType: TextInputType.name,
                             ),
                             options: [
                               Option(
                                 "None",
                                 TextField(
-                                  decoration: InputDecoration(
-                                      hintText: "Example",
-                                      labelStyle:
-                                          TextStyle(color: Color(0xFF40A9FF)),
-                                      enabledBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                              color: Colors.grey, width: 1.0)),
-                                      focusedBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                              color: Color(0xFF40A9FF),
-                                              width: 1.0))),
+                                  decoration: this.defaultinput,
                                   keyboardType: TextInputType.name,
                                 ),
                               ),
@@ -307,11 +305,15 @@ class MyApp extends StatelessWidget {
                                       ),
                                       enabledBorder: OutlineInputBorder(
                                           borderSide: BorderSide(
-                                              color: Colors.grey, width: 1.0)),
+                                              color: Colors.grey, width: 1.0),
+                                          borderRadius:
+                                              BorderRadius.circular(8)),
                                       focusedBorder: OutlineInputBorder(
                                           borderSide: BorderSide(
                                               color: Color(0xFF40A9FF),
-                                              width: 1.0))),
+                                              width: 1.0),
+                                          borderRadius:
+                                              BorderRadius.circular(8))),
                                   keyboardType: TextInputType.name,
                                 ),
                               ),
@@ -328,32 +330,73 @@ class MyApp extends StatelessWidget {
                                       ),
                                       enabledBorder: OutlineInputBorder(
                                           borderSide: BorderSide(
-                                              color: Colors.grey, width: 1.0)),
+                                              color: Colors.grey, width: 1.0),
+                                          borderRadius:
+                                              BorderRadius.circular(8)),
                                       focusedBorder: OutlineInputBorder(
                                           borderSide: BorderSide(
                                               color: Color(0xFF40A9FF),
-                                              width: 1.0))),
+                                              width: 1.0),
+                                          borderRadius:
+                                              BorderRadius.circular(8))),
                                   keyboardType: TextInputType.name,
                                 ),
                               ),
                               Option(
-                                "Suffix Text",
+                                "Prefix Text",
                                 TextField(
                                   decoration: InputDecoration(
                                       hintText: "Example",
                                       labelStyle:
-                                          TextStyle(color: Color(0xFF40A9FF)),
-                                      suffixText: "Https://",
+                                          TextStyle(color: Colors.black),
+                                      isDense: true,
+                                      prefixIcon: Padding(
+                                        padding: EdgeInsets.only(right: 12.0),
+                                        child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            Container(
+                                              decoration: BoxDecoration(
+                                                  border: Border.all(
+                                                    color: Color(0xFFBFBFBF),
+                                                    width: 1.0,
+                                                  ),
+                                                  borderRadius:
+                                                      BorderRadius.only(
+                                                          topLeft: Radius
+                                                              .circular(8),
+                                                          bottomLeft:
+                                                              Radius.circular(
+                                                                  8)),
+                                                  color: gray020),
+                                              child: Padding(
+                                                padding: EdgeInsets.all(15.0),
+                                                child: Text(
+                                                  "Https://",
+                                                  style:
+                                                      TextStyle(color: gray100),
+                                                ),
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      ),
                                       enabledBorder: OutlineInputBorder(
                                           borderSide: BorderSide(
-                                              color: Colors.grey, width: 1.0)),
+                                              color: Color(0xFFBFBFBF),
+                                              width: 1.0),
+                                          borderRadius:
+                                              BorderRadius.circular(8)),
                                       focusedBorder: OutlineInputBorder(
                                           borderSide: BorderSide(
                                               color: Color(0xFF40A9FF),
-                                              width: 1.0))),
+                                              width: 1.0),
+                                          borderRadius:
+                                              BorderRadius.circular(8))),
                                   keyboardType: TextInputType.name,
                                 ),
-                              )
+                              ),
                             ])
                       ],
                     ),
