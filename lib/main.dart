@@ -646,7 +646,32 @@ class MyApp extends StatelessWidget {
           ),
         ),
         Story.simple(
-            name: "Search Input",
-            child: TextFormField(decoration: this.searchInput))
+            name: "Search Box",
+            child: TextFormField(decoration: this.searchInput)),
+        Story(
+            name: "Bottom Navigation",
+            builder: (_, k) => Scaffold(
+                  bottomNavigationBar: BottomNavigationBar(
+                    currentIndex: 0,
+                    selectedLabelStyle: BodyText2Bold,
+                    unselectedLabelStyle: BodyText2Regular,
+                    selectedItemColor: primary700,
+                    unselectedItemColor: gray050,
+                    items: [
+                      BottomNavigationBarItem(
+                        icon: Icon(Icons.home),
+                        label: "Home",
+                      ),
+                      BottomNavigationBarItem(
+                        icon: Icon(Icons.access_time_outlined),
+                        label: "History",
+                      ),
+                      BottomNavigationBarItem(
+                        icon: Icon(Icons.person),
+                        label: "Profile",
+                      ),
+                    ],
+                  ),
+                ))
       ]);
 }
