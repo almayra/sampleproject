@@ -875,5 +875,47 @@ class _MyAppState extends State<MyApp> {
                 ),
               ],
             )),
+        Story.simple(
+            name: "Spinner",
+            child: Container(
+              width: 118.0,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(4)),
+                  color: gray020),
+              padding: EdgeInsets.fromLTRB(10, 4, 10, 4),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  IconButton(
+                    onPressed: increment(),
+                    icon: Icon(
+                      Icons.add,
+                      size: 20,
+                      color: primary700,
+                    ),
+                  ),
+                  SizedBox(
+                    width: 4,
+                  ),
+                  Text("$_counter",
+                      style: TextStyle(
+                          fontFamily: "Noto Sans",
+                          fontSize: 13.0,
+                          color: gray100,
+                          fontWeight: FontWeight.bold)),
+                  SizedBox(
+                    width: 4,
+                  ),
+                  IconButton(
+                    onPressed: decrement(),
+                    icon: Icon(
+                      Icons.remove,
+                      size: 20,
+                      color: primary700,
+                    ),
+                  ),
+                ],
+              ),
+            )),
       ]);
 }
