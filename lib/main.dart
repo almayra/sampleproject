@@ -672,6 +672,151 @@ class MyApp extends StatelessWidget {
                       ),
                     ],
                   ),
+                )),
+        Story(
+            name: "App Bar",
+            builder: (_, k) => Scaffold(
+                  body: Column(
+                    children: [
+                      k.options(
+                          label: "App Bar",
+                          initial: AppBar(
+                            title: Text("Title Goes Here",
+                                style: TextStyle(
+                                    fontFamily: "Poppins",
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: size5,
+                                    color: gray100)),
+                            backgroundColor: gray000,
+                            elevation: 4.0,
+                            leading: Icon(
+                              Icons.chevron_left,
+                              color: gray100,
+                            ),
+                            actions: [
+                              IconButton(
+                                  icon: Icon(Icons.circle, color: gray050),
+                                  onPressed: () => {}),
+                              IconButton(
+                                  icon: Icon(Icons.circle, color: gray050),
+                                  onPressed: () => {}),
+                              IconButton(
+                                  icon: Icon(Icons.circle, color: gray050),
+                                  onPressed: () => {}),
+                              IconButton(
+                                  icon: Icon(Icons.circle, color: gray050),
+                                  onPressed: () => {}),
+                            ],
+                          ),
+                          options: [
+                            Option(
+                                "Nav Bar Child",
+                                AppBar(
+                                  title: Container(
+                                    height: 36,
+                                    child: TextField(
+                                      decoration: InputDecoration(
+                                          border: OutlineInputBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(8)),
+                                          focusedBorder: OutlineInputBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(8),
+                                              borderSide: BorderSide(
+                                                  color: gray020, width: 1.0)),
+                                          fillColor: gray020,
+                                          filled: true,
+                                          prefixIcon: Icon(Icons.search,
+                                              color: gray050),
+                                          hintText: "Search",
+                                          hintStyle: TextStyle(
+                                              color: gray050, fontSize: 13.0)),
+                                      keyboardType: TextInputType.name,
+                                    ),
+                                  ),
+                                  backgroundColor: gray000,
+                                  elevation: 4.0,
+                                  leading: Icon(
+                                    Icons.chevron_left,
+                                    color: gray100,
+                                  ),
+                                )),
+                            Option(
+                                "Nav Bar Child",
+                                AppBar(
+                                  title: Text("Title Goes Here",
+                                      style: TextStyle(
+                                          fontFamily: "Poppins",
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: size5,
+                                          color: gray100)),
+                                  backgroundColor: gray000,
+                                  elevation: 4.0,
+                                  leading: Icon(
+                                    Icons.chevron_left,
+                                    color: gray100,
+                                  ),
+                                  actions: [
+                                    IconButton(
+                                        icon:
+                                            Icon(Icons.circle, color: gray050),
+                                        onPressed: () => {}),
+                                    IconButton(
+                                        icon:
+                                            Icon(Icons.circle, color: gray050),
+                                        onPressed: () => {}),
+                                    IconButton(
+                                        icon:
+                                            Icon(Icons.circle, color: gray050),
+                                        onPressed: () => {}),
+                                    IconButton(
+                                        icon:
+                                            Icon(Icons.circle, color: gray050),
+                                        onPressed: () => {}),
+                                  ],
+                                )),
+                            Option(
+                                "Nav Bar",
+                                AppBar(
+                                  title: Container(
+                                      height: 36,
+                                      child: TextField(
+                                        decoration: InputDecoration(
+                                            border: OutlineInputBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(8)),
+                                            focusedBorder: OutlineInputBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(8),
+                                                borderSide: BorderSide(
+                                                    color: gray020,
+                                                    width: 1.0)),
+                                            fillColor: gray020,
+                                            filled: true,
+                                            prefixIcon: Icon(Icons.search,
+                                                color: gray050),
+                                            hintText: "Search",
+                                            hintStyle: TextStyle(
+                                                color: gray050,
+                                                fontSize: 13.0)),
+                                        keyboardType: TextInputType.name,
+                                      )),
+                                  backgroundColor: gray000,
+                                  elevation: 4.0,
+                                  actions: [
+                                    IconButton(
+                                        icon: Icon(Icons.shopping_cart,
+                                            color: gray050),
+                                        onPressed: () => {}),
+                                    IconButton(
+                                        icon: Icon(Icons.notifications,
+                                            color: gray050),
+                                        onPressed: () => {}),
+                                  ],
+                                ))
+                          ])
+                    ],
+                  ),
                 ))
       ]);
 }
