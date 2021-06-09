@@ -1807,7 +1807,66 @@ class _MyAppState extends State<MyApp> {
                                         ))
                                   ],
                                 ),
-                              ))
+                              )),
+                          Option(
+                              "Type Three",
+                              Card(
+                                color: gray000,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(16)),
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Padding(
+                                        padding: EdgeInsets.all(18),
+                                        child: Container(
+                                            width: 80.0,
+                                            height: 80.0,
+                                            decoration: BoxDecoration(
+                                                shape: BoxShape.circle,
+                                                boxShadow: [
+                                                  BoxShadow(
+                                                    color: Colors.grey,
+                                                    offset: Offset(
+                                                        0.0, 1.0), //(x,y)
+                                                    blurRadius: 6.0,
+                                                  ),
+                                                ],
+                                                image: DecorationImage(
+                                                    fit: BoxFit.fill,
+                                                    image: AssetImage(
+                                                        'assets/Image.png'))))),
+                                    Padding(
+                                        padding: const EdgeInsets.only(
+                                            left: 8,
+                                            top: 4,
+                                            right: 8,
+                                            bottom: 16),
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Text("Courtney Henry",
+                                                style: TextStyle(
+                                                    fontFamily: "Noto Sans",
+                                                    fontSize: 14,
+                                                    color: Color(0xFF006DCC))),
+                                            Text("+62-819-5558-60",
+                                                style: TextStyle(
+                                                    fontFamily: "Noto Sans",
+                                                    fontSize: 13,
+                                                    color: gray100)),
+                                            Text("38766940",
+                                                style: TextStyle(
+                                                    fontFamily: "Noto Sans",
+                                                    fontSize: 12,
+                                                    color: gray070)),
+                                          ],
+                                        ))
+                                  ],
+                                ),
+                              )),
                         ])
                   ],
                 ))
