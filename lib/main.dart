@@ -1867,6 +1867,124 @@ class _MyAppState extends State<MyApp> {
                                   ],
                                 ),
                               )),
+                          Option(
+                              "Type Four",
+                              Container(
+                                height: 100,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8),
+                                  gradient: gradient4,
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Color(0x33064784),
+                                      offset: Offset(0.0, 4.0), //(x,y)
+                                      blurRadius: 13.0,
+                                    ),
+                                  ],
+                                ),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Padding(
+                                      padding:
+                                          EdgeInsets.fromLTRB(18, 12, 18, 12),
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text("Kredit Tersedia",
+                                              style: TextStyle(
+                                                  fontFamily: "Noto Sans",
+                                                  fontSize: 10,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: gray000)),
+                                          SizedBox(
+                                            width: 2.0,
+                                          ),
+                                          Text("Rp 2.000.000",
+                                              style: TextStyle(
+                                                  fontFamily: "Noto Sans",
+                                                  fontSize: 16,
+                                                  color: gray000)),
+                                          SizedBox(
+                                            width: 4.0,
+                                          ),
+                                          Text("Kredit Digunakan",
+                                              style: TextStyle(
+                                                  fontFamily: "Noto Sans",
+                                                  fontSize: 10,
+                                                  fontWeight: FontWeight.normal,
+                                                  color: gray000)),
+                                          Text("Rp 8.000.000",
+                                              style: TextStyle(
+                                                  fontFamily: "Noto Sans",
+                                                  fontSize: 10,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: gray000)),
+                                        ],
+                                      ),
+                                    ),
+                                    Padding(
+                                        padding:
+                                            EdgeInsets.fromLTRB(18, 12, 18, 12),
+                                        child: Row(children: [
+                                          Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.center,
+                                            children: [
+                                              Icon(Icons.add_box, size: 24.0),
+                                              SizedBox(
+                                                width: 4.0,
+                                              ),
+                                              Text("Make Payment",
+                                                  style: TextStyle(
+                                                      fontFamily: "Noto Sans",
+                                                      fontSize: 10,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                      color: gray000))
+                                            ],
+                                          ),
+                                          SizedBox(
+                                            width: 24.0,
+                                          ),
+                                          VerticalDivider(
+                                            color: Color(0x3DFFFFFF),
+                                            indent: 20.0,
+                                            endIndent: 20.0,
+                                          ),
+                                          SizedBox(
+                                            width: 24.0,
+                                          ),
+                                          Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.center,
+                                            children: [
+                                              Icon(Icons.access_time,
+                                                  size: 24.0),
+                                              SizedBox(
+                                                width: 4.0,
+                                              ),
+                                              Text("History",
+                                                  style: TextStyle(
+                                                      fontFamily: "Noto Sans",
+                                                      fontSize: 10,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                      color: gray000))
+                                            ],
+                                          )
+                                        ]))
+                                  ],
+                                ),
+                              )),
                         ])
                   ],
                 ))

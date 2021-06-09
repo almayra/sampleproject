@@ -66,6 +66,11 @@ const gradient3 = LinearGradient(
     end: Alignment.bottomRight,
     colors: [Colors.white, Color(0xFF007FF4)]);
 
+const gradient4 = LinearGradient(
+    begin: Alignment.topCenter,
+    end: Alignment.bottomCenter,
+    colors: [Color(0xFF6DB6F9), Color(0xFF007FF4)]);
+
 const gray000 = Colors.white;
 const gray010 = Color(0xFFFAFAFA);
 const gray020 = Color(0xFFF5F5F5);
