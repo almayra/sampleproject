@@ -1472,6 +1472,344 @@ class _MyAppState extends State<MyApp> {
                           )
                         ])
                   ],
+                )),
+        Story(
+            name: "Snackbar",
+            builder: (_, k) => Column(
+                  children: [
+                    k.options(
+                        label: "Color",
+                        initial: ActionChip(
+                          onPressed: () {},
+                          label: Container(
+                            width: 200,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Icon(
+                                  Icons.info_outline,
+                                  color: gray000,
+                                  size: 16,
+                                ),
+                                SizedBox(
+                                  width: 8,
+                                ),
+                                Text('Snackbar Message',
+                                    style: TextStyle(
+                                        fontFamily: "Noto Sans",
+                                        fontSize: 12,
+                                        color: gray000)),
+                              ],
+                            ),
+                          ),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(4)),
+                          backgroundColor: tertiary900,
+                          elevation: 4.0,
+                        ),
+                        options: [
+                          Option(
+                            "Green",
+                            ActionChip(
+                              onPressed: () {},
+                              label: Container(
+                                width: 200,
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Icon(
+                                      Icons.info_outline,
+                                      color: gray000,
+                                      size: 16,
+                                    ),
+                                    SizedBox(
+                                      width: 8,
+                                    ),
+                                    Text('Snackbar Message',
+                                        style: TextStyle(
+                                            fontFamily: "Noto Sans",
+                                            fontSize: 12,
+                                            color: gray000)),
+                                  ],
+                                ),
+                              ),
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(4)),
+                              backgroundColor: tertiary900,
+                              elevation: 4.0,
+                            ),
+                          ),
+                          Option(
+                            "Yellow",
+                            ActionChip(
+                              onPressed: () {},
+                              label: Container(
+                                width: 200,
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Icon(
+                                      Icons.info_outline,
+                                      color: gray000,
+                                      size: 16,
+                                    ),
+                                    SizedBox(
+                                      width: 8,
+                                    ),
+                                    Text('Snackbar Message',
+                                        style: TextStyle(
+                                            fontFamily: "Noto Sans",
+                                            fontSize: 12,
+                                            color: Color(0xFF8A6B00))),
+                                  ],
+                                ),
+                              ),
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(4)),
+                              backgroundColor: warning_tint1,
+                              elevation: 4.0,
+                            ),
+                          ),
+                        ])
+                  ],
+                )),
+        Story.simple(
+            name: "Overflow Menu",
+            child: PopupMenuButton(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(4)),
+              elevation: 8.0,
+              itemBuilder: (context) => [
+                PopupMenuItem(
+                  child: Text("Pengaturan",
+                      style: TextStyle(
+                        fontFamily: "Noto Sans",
+                        fontSize: 13,
+                        fontWeight: FontWeight.bold,
+                      )),
+                  enabled: false,
+                ),
+                PopupMenuItem(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('Edit Informasi',
+                          style: TextStyle(fontFamily: "Noto Sans")),
+                      Icon(
+                        Icons.edit,
+                        size: 16,
+                      ),
+                    ],
+                  ),
+                ),
+                PopupMenuItem(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('Hapus Kategori',
+                          style: TextStyle(fontFamily: "Noto Sans")),
+                      Icon(
+                        Icons.delete,
+                        size: 16,
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+              child: Icon(Icons.more_vert, size: 24),
+            )),
+        Story(
+            name: "Card",
+            builder: (_, k) => Column(
+                  children: [
+                    k.options(
+                        label: "Type",
+                        initial: Card(
+                          color: gray000,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(16)),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Padding(
+                                  padding: EdgeInsets.all(8),
+                                  child: Material(
+                                    elevation: 8.0,
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(16)),
+                                    child: ClipRRect(
+                                        borderRadius: BorderRadius.circular(16),
+                                        child: Image.asset(
+                                          'assets/Image.png',
+                                          height: 200,
+                                          fit: BoxFit.fitWidth,
+                                        )),
+                                  )),
+                              Padding(
+                                  padding: const EdgeInsets.only(
+                                      left: 8, top: 4, right: 8, bottom: 16),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text("Product Title",
+                                          style: TextStyle(
+                                              fontFamily: "Noto Sans",
+                                              fontSize: 13,
+                                              fontWeight: FontWeight.bold,
+                                              color: gray100)),
+                                      Text("Rp 100.000/Pcs",
+                                          style: TextStyle(
+                                              fontFamily: "Noto Sans",
+                                              fontSize: 12,
+                                              color: gray070))
+                                    ],
+                                  ))
+                            ],
+                          ),
+                        ),
+                        options: [
+                          Option(
+                              "Type One",
+                              Card(
+                                color: gray000,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(16)),
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Padding(
+                                        padding: EdgeInsets.all(8),
+                                        child: Material(
+                                          elevation: 8.0,
+                                          shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(16)),
+                                          child: ClipRRect(
+                                              borderRadius:
+                                                  BorderRadius.circular(16),
+                                              child: Image.asset(
+                                                'assets/Image.png',
+                                                height: 200,
+                                                fit: BoxFit.fitWidth,
+                                              )),
+                                        )),
+                                    Padding(
+                                        padding: const EdgeInsets.only(
+                                            left: 8,
+                                            top: 4,
+                                            right: 8,
+                                            bottom: 16),
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Text("Product Title",
+                                                style: TextStyle(
+                                                    fontFamily: "Noto Sans",
+                                                    fontSize: 13,
+                                                    fontWeight: FontWeight.bold,
+                                                    color: gray100)),
+                                            Text("Rp 100.000/Pcs",
+                                                style: TextStyle(
+                                                    fontFamily: "Noto Sans",
+                                                    fontSize: 12,
+                                                    color: gray070))
+                                          ],
+                                        ))
+                                  ],
+                                ),
+                              )),
+                          Option(
+                              "Type two",
+                              Card(
+                                color: gray000,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(16)),
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Padding(
+                                        padding: EdgeInsets.all(8),
+                                        child: Material(
+                                          elevation: 8.0,
+                                          shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(16)),
+                                          child: ClipRRect(
+                                              borderRadius:
+                                                  BorderRadius.circular(16),
+                                              child: Image.asset(
+                                                'assets/Image.png',
+                                                height: 200,
+                                                fit: BoxFit.fitWidth,
+                                              )),
+                                        )),
+                                    Padding(
+                                        padding: const EdgeInsets.only(
+                                            left: 8,
+                                            top: 4,
+                                            right: 8,
+                                            bottom: 16),
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Text("Product Title",
+                                                style: TextStyle(
+                                                    fontFamily: "Noto Sans",
+                                                    fontSize: 13,
+                                                    fontWeight: FontWeight.bold,
+                                                    color: Color(0xFF006DCC))),
+                                            Row(
+                                              mainAxisSize: MainAxisSize.min,
+                                              children: [
+                                                Text("Status:",
+                                                    style: TextStyle(
+                                                        fontFamily: "Noto Sans",
+                                                        fontSize: 12,
+                                                        color: gray070)),
+                                                SizedBox(width: 4),
+                                                Text("Available",
+                                                    style: TextStyle(
+                                                        fontFamily: "Noto Sans",
+                                                        fontSize: 12,
+                                                        color:
+                                                            Color(0xFF006DCC))),
+                                              ],
+                                            ),
+                                            Row(
+                                              mainAxisSize: MainAxisSize.min,
+                                              children: [
+                                                Text("Harga:",
+                                                    style: TextStyle(
+                                                        fontFamily: "Noto Sans",
+                                                        fontSize: 12,
+                                                        color: gray070)),
+                                                SizedBox(width: 4),
+                                                Text("Rp 20.000/Unit",
+                                                    style: TextStyle(
+                                                        fontFamily: "Noto Sans",
+                                                        fontSize: 12,
+                                                        color: gray070)),
+                                              ],
+                                            ),
+                                            Text("280.909.8990",
+                                                style: TextStyle(
+                                                    fontFamily: "Noto Sans",
+                                                    fontSize: 13,
+                                                    color: gray070)),
+                                          ],
+                                        ))
+                                  ],
+                                ),
+                              ))
+                        ])
+                  ],
                 ))
       ]);
 }
