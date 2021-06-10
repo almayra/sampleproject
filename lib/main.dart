@@ -537,6 +537,7 @@ class _MyAppState extends State<MyApp> {
                         Option(
                             "With Prepend",
                             Row(
+                              mainAxisSize: MainAxisSize.min,
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Icon(
@@ -555,23 +556,23 @@ class _MyAppState extends State<MyApp> {
                         Option(
                             "With Append",
                             Row(
+                              mainAxisSize: MainAxisSize.min,
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
                                   "Button",
                                   style: BodyText2Regular,
                                 ),
-                                Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Icon(
-                                      Icons.chevron_right,
-                                      color: Colors.black,
-                                    ))
+                                Icon(
+                                  Icons.chevron_right,
+                                  color: Colors.black,
+                                )
                               ],
                             )),
                         Option(
                             "Both",
                             Row(
+                              mainAxisSize: MainAxisSize.min,
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Container(
@@ -591,12 +592,7 @@ class _MyAppState extends State<MyApp> {
                                     ],
                                   ),
                                 ),
-                                Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Icon(
-                                      Icons.chevron_right,
-                                      color: Colors.black,
-                                    ))
+                                Icon(Icons.chevron_right, color: Colors.black)
                               ],
                             )),
                       ]),
@@ -624,14 +620,16 @@ class _MyAppState extends State<MyApp> {
                         Option(
                             "With Prepend",
                             Row(
+                              mainAxisSize: MainAxisSize.min,
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Icon(
-                                      Icons.folder_open_outlined,
-                                      color: Colors.white,
-                                    )),
+                                Icon(
+                                  Icons.folder_open_outlined,
+                                  color: Colors.white,
+                                ),
+                                SizedBox(
+                                  width: 4,
+                                ),
                                 Text(
                                   "Button",
                                   style: BodyText2Bold,
@@ -641,23 +639,23 @@ class _MyAppState extends State<MyApp> {
                         Option(
                             "With Append",
                             Row(
+                              mainAxisSize: MainAxisSize.min,
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
                                   "Button",
                                   style: BodyText2Bold,
                                 ),
-                                Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Icon(
-                                      Icons.chevron_right,
-                                      color: Colors.white,
-                                    ))
+                                Icon(
+                                  Icons.chevron_right,
+                                  color: Colors.white,
+                                )
                               ],
                             )),
                         Option(
                             "Both",
                             Row(
+                              mainAxisSize: MainAxisSize.min,
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Container(
@@ -677,12 +675,10 @@ class _MyAppState extends State<MyApp> {
                                     ],
                                   ),
                                 ),
-                                Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Icon(
-                                      Icons.chevron_right,
-                                      color: Colors.white,
-                                    ))
+                                Icon(
+                                  Icons.chevron_right,
+                                  color: Colors.white,
+                                )
                               ],
                             )),
                       ]),
@@ -710,14 +706,14 @@ class _MyAppState extends State<MyApp> {
                   Option(
                       "With Prepend",
                       Row(
+                        mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Icon(
-                                Icons.folder_open_outlined,
-                                color: Colors.black,
-                              )),
+                          Icon(
+                            Icons.folder_open_outlined,
+                            color: Colors.black,
+                          ),
+                          SizedBox(width: 4),
                           Text(
                             "Button",
                             style: BodyText2Regular,
@@ -727,23 +723,23 @@ class _MyAppState extends State<MyApp> {
                   Option(
                       "With Append",
                       Row(
+                        mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
                             "Button",
                             style: BodyText2Regular,
                           ),
-                          Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Icon(
-                                Icons.chevron_right,
-                                color: Colors.black,
-                              ))
+                          Icon(
+                            Icons.chevron_right,
+                            color: Colors.black,
+                          )
                         ],
                       )),
                   Option(
                       "Both",
                       Row(
+                        mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Container(
@@ -763,12 +759,10 @@ class _MyAppState extends State<MyApp> {
                               ],
                             ),
                           ),
-                          Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Icon(
-                                Icons.chevron_right,
-                                color: Colors.black,
-                              ))
+                          Icon(
+                            Icons.chevron_right,
+                            color: Colors.black,
+                          )
                         ],
                       )),
                 ]),
@@ -797,6 +791,7 @@ class _MyAppState extends State<MyApp> {
                         Option(
                             "With Prepend",
                             Row(
+                              mainAxisSize: MainAxisSize.min,
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Icon(
@@ -815,23 +810,23 @@ class _MyAppState extends State<MyApp> {
                         Option(
                             "With Append",
                             Row(
+                              mainAxisSize: MainAxisSize.min,
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
                                   "Button",
                                   style: BodyText2Regular,
                                 ),
-                                Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Icon(
-                                      Icons.chevron_right,
-                                      color: Colors.white,
-                                    ))
+                                Icon(
+                                  Icons.chevron_right,
+                                  color: Colors.white,
+                                )
                               ],
                             )),
                         Option(
                             "Both",
                             Row(
+                              mainAxisSize: MainAxisSize.min,
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Container(
@@ -851,12 +846,10 @@ class _MyAppState extends State<MyApp> {
                                     ],
                                   ),
                                 ),
-                                Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Icon(
-                                      Icons.chevron_right,
-                                      color: Colors.white,
-                                    ))
+                                Icon(
+                                  Icons.chevron_right,
+                                  color: Colors.white,
+                                )
                               ],
                             )),
                       ]),
@@ -884,14 +877,16 @@ class _MyAppState extends State<MyApp> {
                   Option(
                       "With Prepend",
                       Row(
+                        mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Icon(
-                                Icons.folder_open_outlined,
-                                color: Colors.black,
-                              )),
+                          Icon(
+                            Icons.folder_open_outlined,
+                            color: Colors.black,
+                          ),
+                          SizedBox(
+                            width: 4,
+                          ),
                           Text(
                             "Button",
                             style: BodyText2Regular,
@@ -901,23 +896,23 @@ class _MyAppState extends State<MyApp> {
                   Option(
                       "With Append",
                       Row(
+                        mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
                             "Button",
                             style: BodyText2Regular,
                           ),
-                          Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Icon(
-                                Icons.chevron_right,
-                                color: Colors.black,
-                              ))
+                          Icon(
+                            Icons.chevron_right,
+                            color: Colors.black,
+                          )
                         ],
                       )),
                   Option(
                       "Both",
                       Row(
+                        mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Container(
@@ -937,12 +932,10 @@ class _MyAppState extends State<MyApp> {
                               ],
                             ),
                           ),
-                          Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Icon(
-                                Icons.chevron_right,
-                                color: Colors.black,
-                              ))
+                          Icon(
+                            Icons.chevron_right,
+                            color: Colors.black,
+                          )
                         ],
                       )),
                 ]),
@@ -971,14 +964,14 @@ class _MyAppState extends State<MyApp> {
                   Option(
                       "With Prepend",
                       Row(
+                        mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Icon(
-                                Icons.folder_open_outlined,
-                                color: Color(0xFF006DCC),
-                              )),
+                          Icon(
+                            Icons.folder_open_outlined,
+                            color: Color(0xFF006DCC),
+                          ),
+                          SizedBox(width: 4),
                           Text(
                             "Button",
                             style: BodyText2Regular,
@@ -988,23 +981,23 @@ class _MyAppState extends State<MyApp> {
                   Option(
                       "With Append",
                       Row(
+                        mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
                             "Button",
                             style: BodyText2Regular,
                           ),
-                          Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Icon(
-                                Icons.chevron_right,
-                                color: Color(0xFF006DCC),
-                              ))
+                          Icon(
+                            Icons.chevron_right,
+                            color: Color(0xFF006DCC),
+                          )
                         ],
                       )),
                   Option(
                       "Both",
                       Row(
+                        mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Container(
@@ -1024,12 +1017,10 @@ class _MyAppState extends State<MyApp> {
                               ],
                             ),
                           ),
-                          Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Icon(
-                                Icons.chevron_right,
-                                color: Color(0xFF006DCC),
-                              ))
+                          Icon(
+                            Icons.chevron_right,
+                            color: Color(0xFF006DCC),
+                          )
                         ],
                       )),
                 ]),
